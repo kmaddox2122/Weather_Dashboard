@@ -1,0 +1,27 @@
+.jumbotronText {
+    color: aliceblue;
+    font-weight: 500;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.jumbotron {
+    background-image: linear-gradient(to right, #4659B8, #251360);
+    height:50px;
+}
+
+.btn {
+    background-color: #6891E3;
+    max-width: auto;
+    color:white;
+    width: 22.4rem;
+}
+
+.card-title {
+    text-align: center;
+    font-weight: 600;
+}
+
+#search-input {
+    margin-bottom: 1rem;
+}
