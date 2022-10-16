@@ -10,7 +10,7 @@
 //use local storage to keep search history in bootstrap card on left of page
 //write function to link search history location to current and future weather for that city
 
-var apiKey = 'c6cd41dd061c19d8991a2ee75c14a017';
+var apiKey = config.apiKey;
 var city = "Houston";
 var requestLatLon = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + apiKey ;
 //var requestUrl = "https://api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid=" + apiKey;
@@ -22,6 +22,6 @@ fetch(requestLatLon)
     return;
  })
 
- 
+
 
 
