@@ -11,10 +11,11 @@
 //write function to link search history location to current and future weather for that city
 
 var apiKey = config.apiKey;
-var city ='';
+// var city ='';
 
 var fetchButton = document.querySelector(".btn");
 
+//function to pull lat and lon for second api request
 function getApi (){
   city = document.getElementById('search-input').value;
   console.log(city);
@@ -29,7 +30,7 @@ function getApi (){
     getWeather(data[0].lat, data[0].lon);
   });
 }
-
+// current day forecase function
 function getWeather (lat,lon) {
   var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?lat=' + lat + '&lon=' + lon + '&units=imperial&appid=' + apiKey;
   fetch(requestUrl)
@@ -45,7 +46,6 @@ function getWeather (lat,lon) {
       datecontainer.innerHTML = `
       ${date}`
     var temp = data.list[0].main.temp
-      // ${data.list[0].main.temp}*F
       var tempContainer = document.getElementById('tempResults');
       tempContainer.innerHTML = `
       ${temp}`
@@ -68,6 +68,11 @@ function getWeather (lat,lon) {
 }
 
 fetchButton.addEventListener('click', getApi);
+
+// 5 day forecast function
+
+// for (var i = 0; i < 41; i+8)
+
 
 //for 5 day forecast- will need to pull every 8th object in the array
 

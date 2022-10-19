@@ -31,3 +31,10 @@
     float: left;
     width: 50%;
 }
+
+.currentForecast {
+    height: 200px;
+    width: 500px;
+    border: 1px solid rgba(0,0,0,.125);
+    /* When adding margin – left, the rows realign */
+}
