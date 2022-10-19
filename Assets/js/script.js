@@ -19,7 +19,7 @@ var fetchButton = document.querySelector(".btn");
 function getApi (){
   city = document.getElementById('search-input').value;
   console.log(city);
-  var requestLatLon = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + apiKey ;
+  var requestLatLon = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=1&appid=" + apiKey ;
 
   fetch(requestLatLon)
   .then(function (response) {
